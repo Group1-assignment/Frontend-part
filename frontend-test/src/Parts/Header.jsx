@@ -3,8 +3,8 @@ function Header(){
     return(
         <header>
             <h1>My Website</h1>
-                <nav>
-                    <ul>
+                <nav >
+                    <ul ID="hej">
                         <li>First</li>
                         <li>Second</li>
                         <li>Third</li>

@@ -5,7 +5,7 @@ function Footer(){
             <ul>
                 <li>About</li>
                 <li>Contact</li>
-                <li>stuff</li>
+                <li>Stuff</li>
             </ul>
         </div>
     );

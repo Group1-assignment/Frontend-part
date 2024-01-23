@@ -11,7 +11,6 @@ return (
   <Left class ="Split Left"/>
   <Middle class ="Split Middle"/>
   <Right class ="Split Right"/>
-  
   <Footer Class="Footer" />
 
   </>
