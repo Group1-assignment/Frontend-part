@@ -27,7 +27,17 @@ nav a {
   font-weight: bold;
 }
 
-.middle {}
+.content {}
+
+.left {
+  background-color: blueviolet;
+  display: inline-block;
+}
+
+.middle {
+  background-color: blue;
+  display: inline-block;
+}
 
 section {
   margin: 20px;
