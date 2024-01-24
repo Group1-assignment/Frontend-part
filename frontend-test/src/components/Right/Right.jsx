@@ -1,12 +1,4 @@
-function Right(){
-    
-    return(
-        <aside>
-             <p>
-            This is the right part messages and stuff.
-        </p>
-   
-        </aside>
-    );
+function Right() {
+	return <aside></aside>;
 }
-export default Right
+export default Right;

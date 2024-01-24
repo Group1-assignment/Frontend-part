@@ -1,9 +1,8 @@
 function Middle() {
-    return(
-        <main>
-            <p>MiddleComponent</p>
-        </main>
-        
-    );
+	return (
+		<main className="middle">
+			<p>MiddleComponent</p>
+		</main>
+	);
 }
-export default Middle
+export default Middle;
