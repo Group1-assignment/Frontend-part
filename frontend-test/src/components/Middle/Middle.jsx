@@ -1,6 +1,9 @@
 function Middle() {
     return(
-        <p>MiddleComponent</p>
+        <main>
+            <p>MiddleComponent</p>
+        </main>
+        
     );
 }
 export default Middle
