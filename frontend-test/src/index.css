@@ -27,16 +27,50 @@ nav a {
   font-weight: bold;
 }
 
-.content {}
+.content {
+  display: flex;
+  justify-content: center;
+}
 
 .left {
   background-color: blueviolet;
-  display: inline-block;
+  flex-grow: 1;
+  min-width: 100px;
+
 }
 
 .middle {
   background-color: blue;
-  display: inline-block;
+  width: 680px;
+  justify-content: center;
+}
+
+.right {
+  background-color: red;
+  min-width: 100px;
+  flex-grow: 1;
+  display: flex;
+}
+
+@media (max-width: 880px) {
+
+  .left {
+    display: none;
+  }
+
+  .middle {
+    max-width: 100%;
+  }
+
+  .left, .right {
+    width: 100px;
+  }
+}
+
+@media (max-width: 780px) {
+  .right {
+    display: none;
+  }
 }
 
 section {

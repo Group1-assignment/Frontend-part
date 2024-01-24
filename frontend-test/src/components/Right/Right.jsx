@@ -1,4 +1,4 @@
 function Right() {
-	return <aside></aside>;
+	return <aside className="right"></aside>;
 }
 export default Right;

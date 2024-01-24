@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
-import styles from "./left.module.css";
 function Left() {
 	return (
-		<aside className={styles.left}>
+		<aside className="left">
 			<nav>
 				<ul>
 					<li>
