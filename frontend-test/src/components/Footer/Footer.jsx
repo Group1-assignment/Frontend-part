@@ -1,13 +1,14 @@
+import styles from './footer.module.css';
 function Footer(){
 
     return(
-        <div>
+        <footer className={styles.footer}>
             <ul>
-                <li>About</li>
+                <li className={styles.li}>About</li>
                 <li>Contact</li>
                 <li>Stuff</li>
             </ul>
-        </div>
+        </footer>
     );
 }
 
