@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import Layout from './components/Layout/Layout';
 import './index.css'
+import ErrorPage from './error-page'
+import Post from './components/Post/Post';
 
 //<Header />
 //<Left />
@@ -16,10 +18,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout/>,
+    errorElement: <ErrorPage />,
     children:[
       {
         path: "/",
-        element: <div>Home</div>
+        element: <Post/>
       },
       {
         path: "second",

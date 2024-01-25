@@ -1,5 +1,8 @@
 import { NavLink } from "react-router-dom";
 import styles from "./header.module.css";
+import { Outlet } from "react-router-dom";
+
+
 const active = ({ isActive }) => ({
 	color: isActive ? "black" : "white",
 	textDecoration: "none",
@@ -29,6 +32,7 @@ function Header() {
 				</ul>
 			</nav>
 		</header>
+		
 	);
 }
 export default Header;
