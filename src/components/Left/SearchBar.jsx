@@ -4,23 +4,26 @@ import { FaSearch } from 'react-icons/fa';
 
 
 //
-export default function SearchBar({ setResults})  {
+export default function SearchBar({ setResults }) {
     const [input, setInput] = useState("")
-    const fetchData = (value) => (
-        fetch("https://jasonplaceholder.tyoicode.com/users")
-        .then((response) => response.jason()) //
-        .then((jason) => 
-        {const results = json.filter((user) => {
-            return ( //bör engetligen filtreras i backend. test version nu bara 
-                value &&
-                 user && 
-                 user.name &&
-                 user.name.toLowerCase().includes(value)
 
-            )
-        });
-        setResults(results)
-        }))
+    const fetchData = (value) => {
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then((response) => response.jason()) //
+            .then((json) => {
+                const results = json.filter((user) => {
+
+                    return ( //bör engetligen filtreras i backend. test version nu bara 
+                        value &&
+                        user &&
+                        user.name &&
+                        user.name.toLowerCase().includes(value)
+
+                    )
+                })
+                setResults(results)
+            })
+    }
 
     const handleChange = (value) => {
         setInput(value)
