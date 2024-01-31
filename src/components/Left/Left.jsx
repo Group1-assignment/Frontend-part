@@ -1,7 +1,17 @@
 import { NavLink } from "react-router-dom";
+import SearchBar from "./SearchBar";
+import { useState } from "react";
+import SerchResultsList from "./SerchResultsList";
+
+
 function Left() {
+
+	const [results, setResults] = useState([])
+
 	return (
 		<aside className="left">
+			<SearchBar setResults={setResults}/>
+			<SerchResultsList results={results}/>
 			<nav>
 				<ul>
 					<li>
