@@ -7,7 +7,7 @@ import {
 import Layout from './components/Layout/Layout';
 import './index.css'
 import ErrorPage from './error-page'
-import Post from './components/Post/Post';
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import Middle from './components/Middle/Middle';
 
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     children:[
       {
         path: "/",
-        element: <Post/>
+        element: <div>test</div>
       },
       {
         path: "second",

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../Post/post.module.css'
+import styles from './post.module.css'
 
 
 export default function PostList({ posts }) {
