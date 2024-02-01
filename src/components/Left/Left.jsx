@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import SearchBar from "./SearchBar";
+import SearchBar from "./Search/SearchBar";
 import { useState } from "react";
-import SerchResultsList from "./SerchResultsList";
+import SerchResultsList from "./Search/SerchResultsList";
 
 
 function Left() {
