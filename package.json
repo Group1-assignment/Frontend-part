@@ -1,4 +1,18 @@
 {
+<<<<<<< Updated upstream
+=======
+  "name": "frontend-part",
+  "private": true,
+  "proxy": "http://localhost/7168",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+>>>>>>> Stashed changes
   "dependencies": {
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.3",

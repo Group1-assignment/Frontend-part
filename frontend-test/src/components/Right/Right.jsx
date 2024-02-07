@@ -1,4 +1,8 @@
+
+
 function Right() {
-	return <aside className="right"></aside>;
+	return <aside className="right"> 
+	
+	</aside>;
 }
 export default Right;
