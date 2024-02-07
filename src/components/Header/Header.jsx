@@ -3,6 +3,7 @@ import styles from "./header.module.css";
 import { Outlet } from "react-router-dom";
 
 
+
 const active = ({ isActive }) => ({
 	color: isActive ? "black" : "white",
 	textDecoration: "none",
@@ -11,6 +12,7 @@ const active = ({ isActive }) => ({
 function Header() {
 	return (
 		<header>
+			
 			<h1 className={styles.head}>My Website</h1>
 			<nav>
 				<ul>
