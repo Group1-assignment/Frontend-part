@@ -6,9 +6,9 @@ import axios from 'axios';
 
 //
 export default function SearchBar({ setResults }) {
-    const [input, setInput] = useState("")
+    useEffect (() => {}, [])
 
-    fetch('/api/weatherforecast')
+    fetch('/api/user')
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -20,7 +20,9 @@ export default function SearchBar({ setResults }) {
       .catch((error) => {
         console.log(`%c ${error}`, 'color: orange;');
       })
-    
+
+
+    const [input, setInput] = useState("")
     const fetchData = (value) => {
         fetch("https://jsonplaceholder.typicode.com/users")
             .then((response) => response.json()) //
