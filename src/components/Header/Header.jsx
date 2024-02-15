@@ -3,6 +3,7 @@ import styles from "./header.module.css";
 import { Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Modal from "./Modal/Modal";
+import Register from "./Modal/Register";
 
 
 
@@ -27,10 +28,8 @@ function Header() {
 				console.log(`%c ${error}`, 'color: orange;');
 			})
 	}, [])
-	const [modal, setModal] = useState(false)
-	const toggleModal = () => {
-		setModal(false);
-	}
+	const [modal, setModal] = useState("")
+	
 
 	return (
 		<header className={styles.Header}>
@@ -60,14 +59,25 @@ function Header() {
 			</nav>
 			<a className={styles.loginbtn}
 			onClick={() => {
-						setModal(true)
+						setModal("login")
 					}}>
 				<button
 					className="openModal"
 					
 				>
 					sign in</button></a>
-			{modal && <Modal setModal={setModal} />}
+			{modal == "login" && <Modal setModal={setModal} />}
+			
+			<a className={styles.loginbtn}
+			onClick={() => {
+						setModal("register");
+					}}>
+				<button
+					className="openModal"
+					
+				>
+					Register</button></a>
+			{modal == "register" && <Register setModal={setModal} />}
 		</header>
 
 
