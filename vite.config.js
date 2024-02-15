@@ -8,7 +8,7 @@ import react from '@vitejs/plugin-react'
     server: {
       proxy: {
         '/api': {
-          target: 'http://localhost:5240',
+          target: 'http://localhost:7168',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ''),
         },
