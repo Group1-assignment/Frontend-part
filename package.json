@@ -1,6 +1,7 @@
 {
   "name": "frontend-part",
   "private": true,
+  "proxy": "http://localhost:7168",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

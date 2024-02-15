@@ -6,23 +6,23 @@ import axios from 'axios';
 
 //
 export default function SearchBar({ setResults }) {
-    useEffect (() => {}, [])
-
-    fetch('/api/user')
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } console.log(response)
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(`%c ${error}`, 'color: orange;');
-      })
-
-
-    const [input, setInput] = useState("")
+  const [input, setInput] = useState("")
+  
+  useEffect (() => {
+		
+		fetch("https://localhost:7168/User")
+		.then((response) => {
+		  if (response.ok) {
+			return response.json();
+		  } console.log(response)
+		})
+		.then((response) => {
+		  console.log(response);
+		})
+		.catch((error) => {
+		  console.log(`%c ${error}`, 'color: orange;');
+		})}, [])
+	  
     const fetchData = (value) => {
         fetch("https://jsonplaceholder.typicode.com/users")
             .then((response) => response.json()) //

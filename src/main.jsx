@@ -11,6 +11,8 @@ import ErrorPage from './error-page'
 import "bootstrap/dist/css/bootstrap.min.css"
 import Middle from './components/Middle/Middle';
 
+
+
 //<Header />
 //<Left />
 //<Middle />
@@ -34,14 +36,14 @@ const router = createBrowserRouter([
       {
         path: "third",
         element: <div>Third</div>
+      },
+      {
+       
       }
-     
 
     ]
   },
-  {
-
-  }
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
