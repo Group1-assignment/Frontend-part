@@ -13,7 +13,7 @@ export default function Modal({ setModal }) {
             password: password
         }
         
-
+     
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',
@@ -45,7 +45,7 @@ export default function Modal({ setModal }) {
                 <div className={styles.popup} onClick={(event) => event.stopPropagation()}>
                     <h2>Sign In</h2>
                     
-                    <p>Username</p>
+                    <p>Email</p>
                     <input type="text" value={username}
                      onChange={(e) => setUsername(e.target.value)} />
                    

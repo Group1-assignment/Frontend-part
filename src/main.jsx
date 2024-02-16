@@ -44,11 +44,13 @@ const router = createBrowserRouter([
 
     ]
   },
-  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <autkeystuff>
     <RouterProvider router={router} />
+    </autkeystuff>
+    
   </React.StrictMode>,
 )
