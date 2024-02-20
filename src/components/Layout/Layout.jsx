@@ -1,6 +1,7 @@
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Left from "../Left/Left";
+
 import Middle from "../Middle/Middle";
 import Right from "../Right/Right";
 
@@ -9,7 +10,7 @@ export default function Layout() {
 		<div>
 			<Header />
 			<div className="content">
-				<Left />
+				<Left /> 
 				<Middle />
 				<Right />
 			</div>

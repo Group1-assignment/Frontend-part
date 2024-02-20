@@ -10,6 +10,9 @@ import ErrorPage from './error-page'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import Middle from './components/Middle/Middle';
+import { LoginProvider } from './components/Contexts/LoginContext';
+
+
 
 //<Header />
 //<Left />
@@ -34,18 +37,20 @@ const router = createBrowserRouter([
       {
         path: "third",
         element: <div>Third</div>
+      },
+      {
+       
       }
-     
 
     ]
   },
-  {
-
-  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <LoginProvider>
     <RouterProvider router={router} />
+    </LoginProvider>
+    
   </React.StrictMode>,
 )
