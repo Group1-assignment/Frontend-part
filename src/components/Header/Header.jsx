@@ -11,6 +11,9 @@ const active = ({ isActive }) => ({
 });
 
 function Header() {
+    const { isLoggedIn, logout } = useLogin(); 
+    const [modal, setModal] = useState("");
+
     useEffect(() => {
         fetch("https://localhost:7168/api/post")
             .then((response) => {
@@ -25,10 +28,12 @@ function Header() {
             .catch((error) => {
                 console.log(`%c ${error}`, "color: orange;");
             });
-    }, []);
 
-    const { isLoggedIn, logout } = useLogin(); // Use useLogin hook to get isLoggedIn state
-    const [modal, setModal] = useState("");
+        const storedLoggedInStatus = localStorage.getItem("isLoggedIn");
+        if (storedLoggedInStatus === "true") {
+            isLoggedIn === true;
+        }
+    }, []);
 
     return (
         <header className={styles.Header}>
@@ -55,12 +60,12 @@ function Header() {
             <a
                 className={styles.loginbtn}
                 onClick={() => {
-					if(isLoggedIn) {
-						logout()
-						console.log(isLoggedIn ? "true" : "false")
-					}
-					else {
-                    setModal("login");}
+                    if(isLoggedIn) {
+                        logout();
+                        console.log(isLoggedIn ? "true" : "false");
+                    } else {
+                        setModal("login");
+                    }
                 }}
             >
                 <button className="openModal">{isLoggedIn ? "Logout" : "Sign in"}</button>
