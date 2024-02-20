@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import styles from '../header.module.css';
+import { useLogin } from '../../Contexts/LoginContext';
 
 export default function Modal({ setModal }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const {isloggedIn, toggleLogin} = useLogin('');
+
+
 
     const loginRequest = async () => {
         const apiUrl = 'https://localhost:7168/Login'
@@ -27,7 +31,9 @@ export default function Modal({ setModal }) {
                 console.log('Login successful', response.json)
                 const data = await response.json()
                 console.log(data)
+                toggleLogin()
                 setModal('')
+                
             } else {
                
                 console.error('Login failed:', response.status);
@@ -43,7 +49,7 @@ export default function Modal({ setModal }) {
         <>
             <div className={styles.overlay} onClick={() => setModal('')}>
                 <div className={styles.popup} onClick={(event) => event.stopPropagation()}>
-                    <h2>Sign In</h2>
+                    <h2> Sign In </h2>
                     
                     <p>Email</p>
                     <input type="text" value={username}

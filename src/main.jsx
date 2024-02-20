@@ -10,7 +10,7 @@ import ErrorPage from './error-page'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import Middle from './components/Middle/Middle';
-
+import { LoginProvider } from './components/Contexts/LoginContext';
 
 
 
@@ -48,9 +48,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <autkeystuff>
+    <LoginProvider>
     <RouterProvider router={router} />
-    </autkeystuff>
+    </LoginProvider>
     
   </React.StrictMode>,
 )
