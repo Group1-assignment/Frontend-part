@@ -15,20 +15,7 @@ function Header() {
     const [modal, setModal] = useState("");
 
     useEffect(() => {
-        fetch("https://localhost:7168/api/post")
-            .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                }
-                console.log(response);
-            })
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((error) => {
-                console.log(`%c ${error}`, "color: orange;");
-            });
-
+    
         const storedLoggedInStatus = localStorage.getItem("isLoggedIn");
         if (storedLoggedInStatus === "true") {
             isLoggedIn === true;

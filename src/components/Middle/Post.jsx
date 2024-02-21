@@ -14,12 +14,12 @@ export default function NewPost() {
 
     try {
       const response = await axios.post(
-        'https://localhost:7168/api/Post/add',
+        'https://localhost:7168/Post/add',
         {
           title,
           content,
           author,
-          datetime: new Date().toISOString(),
+          datetime: new Date().toString(),
         }
       );
       

@@ -6,7 +6,7 @@ export default function Modal({ setModal }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const {isloggedIn, toggleLogin} = useLogin('');
+    const { toggleLogin} = useLogin('');
 
 
 
